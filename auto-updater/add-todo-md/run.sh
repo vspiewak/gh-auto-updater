@@ -11,10 +11,6 @@ readonly file='TODO.md'
 # Dump call
 echo "⚙️ Launched: $(basename $0)" "$@"
 
-# Show a fortune (use init.sh)
-echo "🥠 Show a fortune cookie"
-fortune -s 
-
 # Add TODO.md if not present
 if [[ ! -f "$file" ]]; then
   echo '# TODO' > "$file"
@@ -22,3 +18,8 @@ if [[ ! -f "$file" ]]; then
   else 
   echo "❎ '$file' already exist"
 fi
+
+# Write a fortune (use init.sh)
+echo "🥠 Write a fortune cookie"
+echo >> "$file"
+fortune -s >> "$file"
