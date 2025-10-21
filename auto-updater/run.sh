@@ -146,10 +146,10 @@ done < <(
 echo "⚙️ repos: ${repos[@]}"
 
 # Run init script if exist
-#if [[ -f "$script_dir/$update_name/init.sh" ]]; then
-#  echo "🛠️ Run init.sh"
-#  $script_dir/$update_name/init.sh
-#fi
+if [[ -f "$script_dir/$update_name/init.sh" ]]; then
+  echo "🛠️ Run init.sh"
+  $script_dir/$update_name/init.sh
+fi
 
 # For each repos
 for repo in "${repos[@]}"; do
