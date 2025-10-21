@@ -6,20 +6,19 @@ set -eufo pipefail
 IFS=$'\n\t'
 
 # Constants
-readonly file='TODO.md'
+readonly file='FORTUNE.md'
 
 # Dump call
 echo "⚙️ Launched: $(basename $0)" "$@"
 
-# Write TODO.md
+# Write FORTUNE.md
 if [[ ! -f "$file" ]]; then
-  echo '# TODO' > "$file"
+  echo '# FORTUNE' > "$file"
   echo "✅ '$file' created"
-else
+else 
   echo "❎ '$file' already exist"
 fi
 
-# Write a fortune (use init.sh)
+# Append a fortune
 echo "🥠 Write a fortune cookie"
-echo >> "$file"
 fortune -s >> "$file"

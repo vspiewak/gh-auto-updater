@@ -15,6 +15,7 @@ on:
         default: add-todo-md
         options:
           - add-todo-md
+          - add-fortune-md
 
 jobs:
 
