@@ -33,7 +33,7 @@ jobs:
       - name: Setup git user
         id: setup_git_user
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+          GH_TOKEN: ${{ secrets.GH_AUTO_UPDATER_SECRET }}        
         run: |          
           
           git config --global user.name 'Vincent Spiewak'
@@ -43,7 +43,7 @@ jobs:
 
       - name: Run auto-updater
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_AUTO_UPDATER_SECRET }}
         run: |
 
           ./auto-updater/run.sh \
