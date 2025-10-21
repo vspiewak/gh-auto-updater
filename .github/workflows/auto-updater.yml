@@ -1,0 +1,37 @@
+name: ✨ Auto Updater
+on:
+  workflow_dispatch:
+    inputs:
+      repositories:
+        description: "Repositories [eg. repo1,repo2]"
+        required: true
+        type: string
+      update_name:
+        description: "Update name"
+        required: true
+        type: choice
+        default: add-todo-md
+        options:
+          - add-todo-md
+
+jobs:
+
+  auto-updater:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup git user
+        id: setup_git_user
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+        run: |          
+
+          gh auth setup-git
