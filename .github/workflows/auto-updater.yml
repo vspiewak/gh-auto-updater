@@ -1,4 +1,6 @@
 name: ✨ Auto Updater
+run-name: ✨ Auto Updater ${{ inputs.update_name }} on ${{ inputs.repositories }}
+
 on:
   workflow_dispatch:
     inputs:
@@ -35,3 +37,12 @@ jobs:
         run: |          
 
           gh auth setup-git
+
+      - name: Run auto-updater
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+
+          ./auto-updater/run.sh \
+            --repositories "${{ inputs.repositories }}" \
+            --update-name "${{ inputs.update_name }}"
