@@ -37,8 +37,9 @@ jobs:
         run: |          
           
           git config --global user.name 'Vincent Spiewak'
-          git config --global credential.username "vspiewak"
-          
+          git config --global user.email 'vspiewak@users.noreply.github.com'
+          git config --global credential.username 'vspiewak'
+
           gh auth setup-git
 
       - name: Run auto-updater
