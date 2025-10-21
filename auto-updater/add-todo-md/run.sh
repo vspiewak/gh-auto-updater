@@ -18,8 +18,3 @@ if [[ ! -f "$file" ]]; then
 else
   echo "❎ '$file' already exist"
 fi
-
-# Write a fortune (use init.sh)
-echo "🥠 Write a fortune cookie"
-echo >> "$file"
-fortune -s >> "$file"
