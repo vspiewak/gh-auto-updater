@@ -212,7 +212,7 @@ for repo in "${repos[@]}"; do
   echo "📤 Pushing branch '$branch'"
   if ! git push -u origin "$branch"; then
     echo "❌ error while pushing $branch upstream"
-    continue
+    exit 1
   fi
 
   # Upsert auto-updater label
@@ -256,7 +256,7 @@ for repo in "${repos[@]}"; do
     status=$?
     if (( attempt == max )); then
       echo "❌ gh pr create failed after $max attempts (exit $status)"
-      break
+      exit 1
     fi
     echo "⚠️ gh failed (exit $status). retrying in ${delay}s... [$attempt/$max]"
     sleep "$delay"
