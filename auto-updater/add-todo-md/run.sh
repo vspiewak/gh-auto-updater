@@ -20,6 +20,6 @@ if [[ ! -f "$file" ]]; then
 fi
 
 # Write a fortune (use init.sh)
-echo "🥠 Write a fortune cookie"
-echo >> "$file"
-fortune -s >> "$file"
+#echo "🥠 Write a fortune cookie"
+#echo >> "$file"
+#fortune -s >> "$file"
