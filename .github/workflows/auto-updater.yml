@@ -1,5 +1,5 @@
 name: ✨ Auto Updater
-run-name: ✨ Auto Updater ${{ inputs.update_name }} on ${{ inputs.repositories }}
+run-name: ✨ Auto Updater [${{ inputs.update_name }}] on [${{ inputs.repositories }}]
 
 on:
   workflow_dispatch:
