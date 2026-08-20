@@ -5,7 +5,7 @@ Open the **same pull request across many repositories** — from one command.
 At work, this pattern has opened **27,000+ PRs** across a fleet of 2,700+ repos (83% merged, every one reviewed by a human).
 This repo is the **minimal, runnable version** : fork it and get your first bot PR in ~10 minutes.
 
-📝 Full story on the blog : [**gh-auto-updater : opening 27,000+ pull requests across a repo fleet**](https://vspiewak.com/gh-auto-updater-mass-pull-requests-across-a-repo-fleet)
+📝 The full story on the blog : [**how this ran across a whole fleet**](https://vspiewak.com/gh-auto-updater-mass-pull-requests-across-a-repo-fleet)
 
 ## How it works
 
